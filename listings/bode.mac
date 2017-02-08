@@ -1,0 +1,9 @@
+R: 11e3$
+C: 330e-12$
+omega_n: 1/R/C$
+zeta: 1.5$
+H(s) := omega_n^2 / (s^2 + 2*zeta*omega_n*s + omega_n^2)$
+load("bode")$
+omega_from: 2*%pi*100$
+omega_to: 2*%pi*100000$
+bode_gain(H(s), [omega, omega_from, omega_to])$

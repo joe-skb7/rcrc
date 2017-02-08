@@ -1,0 +1,11 @@
+i1: (vI - vC1) / R1$
+i2: vC1 / (1/s/C1)$
+i3: vC1 / (R2 + 1/s/C2)$
+eq1: i1 - i2 - i3 = 0$
+sol: solve(eq1, vC1)$
+vC1: rhs(sol[1]);
+i1: ev(i1, sol)$
+i2: ev(i2, sol)$
+i3: ev(i3, sol)$
+vO: ratsimp(vC1 - i3*R2);
+define(H(s), vO/vI);

@@ -1,0 +1,10 @@
+_H(s) := omega_n^2 / (s^2 + 2*zeta*omega_n*s + omega_n^2)$
+H(omega) := subst([s = %i*omega], _H(s))$
+R(omega) := realpart(H(omega))$
+X(omega) := imagpart(H(omega))$
+A(omega) := cabs(H(omega))$
+/* Print values */
+H(omega);R(omega);X(omega);A(omega);
+eq1: A(omega) = 1/sqrt(2)$
+sol: solve(eq1, omega)$
+omega_c: rhs(sol[2]);
