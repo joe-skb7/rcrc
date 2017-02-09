@@ -95,9 +95,11 @@ using Linux software like \appname{Maxima} and \appname{Qucs}.
 
 \section{Transfer function calculation}
 
+\subsection{Calculating output voltage}
+
 \begin{figure}[h!]
 \centering
-\begin{circuitikz}[european, scale=4]
+\begin{circuitikz}[european, scale=3.5]
 \draw
 (0,0) to[sV, l=$v_I$] (0,1) node[label={[font=\footnotesize]$v_I$}]{}
       to[R, l=$R_1$, i_=$i_1$] (1,1)
@@ -232,7 +234,7 @@ All calculations were done in \appname{Maxima}, see listing~\ref{lst:wc}.
   label=lst:wc
 ]{listings/wc.mac}
 
-\section{Modelling the filter}
+\section{Simulating the filter}
 
 \subsection{Simplification}
 
@@ -271,7 +273,7 @@ Then real cut-off frequency is:
 Or in angular form:
 \[ \omega_c = 2 \pi f_c = \SI{103094.5}{\radian\per\second} \]
 
-\subsection{Modelling in Maxima}
+\subsection{Simulation in Maxima}
 
 Listing~\ref{lst:bode} shows the way to plot bode diagrams in \appname{Maxima}.
 
@@ -292,7 +294,7 @@ The resulting plot is shown on figure~\ref{fig:bode}.
 One can also use \appname{COMA} package in \appname{Maxima} for Control
 Engineering calculations and visualization.
 
-\subsection{Modelling in Qucs}
+\subsection{Simulation in Qucs}
 
 \begin{figure}[h!]
 \centering
